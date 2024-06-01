@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+}
+
+.styled-block {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px 80px; 
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.styled-block::before,
+.styled-block::after {
+    content: '';
+    position: absolute;
+    top: 15%; 
+    bottom: 15%; 
+    width: 15px; 
+    background-color: green;
+}
+
+.styled-block::before {
+    left: -15px; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.styled-block::after {
+    right: -15px; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
